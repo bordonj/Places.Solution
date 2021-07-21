@@ -14,42 +14,62 @@ namespace Places.Tests
       Place.ClearAll();
     }
 
-    [TestMethod]
-    public void PlaceConstructor_CreatesInstanceOfPlace_Place()
-    {
-      Place newPlace = new Place("test");
-      Assert.AreEqual(typeof(Place), newPlace.GetType());
-    }
+    // [TestMethod]
+    // public void PlaceConstructor_CreatesInstanceOfPlace_Place()
+    // {
+    //   Place newPlace = new Place("test");
+    //   Assert.AreEqual(typeof(Place), newPlace.GetType());
+    // }
+
+    // [TestMethod]
+    // public void GetPlaceName_ReturnsPlaceName_String()
+    // {
+    //   //Arrange
+    //   string placeName = "Manchester, New Hampshire";
+
+    //   //Act
+    //   Place newPlace= new Place(placeName);
+    //   string result = newPlace.PlaceName;
+
+    //   //Assert
+    //   Assert.AreEqual(placeName, result);
+    // }
 
     [TestMethod]
-    public void GetPlaceName_ReturnsPlaceName_String()
+    public void SetProperties_ConstructorSetsPropertiesAccurately_String()
     {
       //Arrange
-      string placeName = "Manchester, New Hampshire";
-
-      //Act
-      Place newPlace= new Place(placeName);
-      string result = newPlace.PlaceName;
-
-      //Assert
-      Assert.AreEqual(placeName, result);
-    }
-
-    [TestMethod]
-    public void SetCompany_SetCompanyProperty_String()
-    {
-      //Arrange
+      
+    // PlaceName
+    // DateOfVisit
+    // Company (relationship to person?, name?)
+    // LengthOfStay
+    // JournalEntry
+    // FavFoods
+      string placeName = "Atlanta, Georgia";
+      string lengthOfStay = "5";
+      string dateOfVisit = "08/21/2021";
       string company = "Fabio";
-      Place newPlace = new Place(company);
+      string journalEntry = "Fabio and I went to the park.as It was lovely.";
+      string favFood = "Baklava";
 
       //Act
-      string updatedPlaceName = "Atlanta, Georgia";
-      newPlace.PlaceName = updatedPlaceName;
-      string result = "0";
-      // string result = newPlace.PlaceName;
+      Place newPlace = new Place(placeName, lengthOfStay, dateOfVisit, company, journalEntry, favFood);
+      string resultPlaceName = newPlace.PlaceName;
+      string resultCompany = newPlace.Company;
+      string resultLengthOfStay = newPlace.LengthOfStay;
+      string resultDateOfVisit = newPlace.DateOfVisit;
+      string resultJournalEntry = newPlace.JournalEntry;
+      string resultFavFood = newPlace.FavFood;
+
 
       //Assert
-      Assert.AreEqual(updatedPlaceName, result);
+      Assert.AreEqual(resultPlaceName, newPlace.PlaceName);
+      Assert.AreEqual(resultLengthOfStay, newPlace.LengthOfStay);
+      Assert.AreEqual(resultDateOfVisit, newPlace.DateOfVisit);
+      Assert.AreEqual(resultCompany, newPlace.Company);
+      Assert.AreEqual(resultJournalEntry, newPlace.JournalEntry);
+      Assert.AreEqual(resultFavFood, newPlace.FavFood);
     }
 
     // [TestMethod]
