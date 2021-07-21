@@ -27,17 +27,17 @@ namespace Places.Controllers
       return RedirectToAction("Index");
 
     }
-    // [HttpPost("/places/delete")]
-    // public ActionResult DeleteAll()
-    // {
-    //   Item.ClearAll();
-    //   return View();
-    // }
+    [HttpPost("/places/delete")]
+    public ActionResult DeleteAll()
+    {
+      Place.ClearAll();
+      return View();
+    }
     // [HttpGet("/places/{id}")] // new syntax, curly braces in URL path in route decorate... route now utilizing dynamic routing
     // public ActionResult Show(int id)
     // {
-    //   Item foundItem = Item.Find(id);
-    //   return View(foundItem);
+    //   Place foundPlace = Place.Find(id);
+    //   return View(foundPlace);
     // }
 
   }
