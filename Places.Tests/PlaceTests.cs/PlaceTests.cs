@@ -35,21 +35,22 @@ namespace Places.Tests
       Assert.AreEqual(placeName, result);
     }
 
-    // [TestMethod]
-    // public void SetDescription_SetDescription_String()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
+    [TestMethod]
+    public void SetCompany_SetCompanyProperty_String()
+    {
+      //Arrange
+      string company = "Fabio";
+      Place newPlace = new Place(company);
 
-    //   //Act
-    //   string updatedDescription = "Do the dishes";
-    //   newItem.Description = updatedDescription;
-    //   string result = newItem.Description;
+      //Act
+      string updatedPlaceName = "Atlanta, Georgia";
+      newPlace.PlaceName = updatedPlaceName;
+      string result = "0";
+      // string result = newPlace.PlaceName;
 
-    //   //Assert
-    //   Assert.AreEqual(updatedDescription, result);
-    // }
+      //Assert
+      Assert.AreEqual(updatedPlaceName, result);
+    }
 
     // [TestMethod]
     // public void GetAll_ReturnsEmptyList_ItemList()
