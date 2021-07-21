@@ -4,14 +4,14 @@ namespace Places.Models
 {
   public class Place
   {
-    public string Description { get; set; }
+    public string PlaceName { get; set; }
     public int Id { get; } // don't add set method, bc this property will be set in the constructor automatically
     // don't EVER want to manually edit it bc it might lose uniqueness
     private static List<Place> _instances = new List<Place> {};
 
-    public Place (string description)
+    public Place (string placeName)
     {
-      Description = description;
+      PlaceName = placeName;
       _instances.Add(this);
       Id = _instances.Count;
     }

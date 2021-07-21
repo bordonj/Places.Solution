@@ -22,17 +22,17 @@ namespace Places.Tests
     }
 
     [TestMethod]
-    public void GetDescription_ReturnsDescription_String()
+    public void GetPlaceName_ReturnsPlaceName_String()
     {
       //Arrange
-      string description = "Manchester, New Hampshire";
+      string placeName = "Manchester, New Hampshire";
 
       //Act
-      Place newPlace= new Place(description);
-      string result = newPlace.Description;
+      Place newPlace= new Place(placeName);
+      string result = newPlace.PlaceName;
 
       //Assert
-      Assert.AreEqual(description, result);
+      Assert.AreEqual(placeName, result);
     }
 
     // [TestMethod]

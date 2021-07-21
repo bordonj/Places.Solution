@@ -8,8 +8,8 @@
 <ul>
   @foreach (Place place in Model)
   {
-    <!-- <li>@place.Description</li> -->
-    <li><a href='/places/@place.Id'>@place.Description</a></li>
+    <!-- <li>@place.PlaceName</li> -->
+    <li><a href='/places/@place.Id'>@place.PlaceName</a></li>
     <!-- updated this so each Item is a link to that Item detail page -->
   }
 </ul>
