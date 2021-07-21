@@ -3,13 +3,38 @@ h2 {
   margin: 25px 0;
 }
 
-.btn {
+.btn-info, .btn-success {
   width: 80px;
   margin: auto;
   display: block;
   margin-top: 10px;
 }
 
-body {
-  padding: 0 150px;
+body, html {
+  /* padding: 0 150px; */
+  background-image: url(https://www.groovehq.com/blog/wp-content/uploads/2018/09/blog-044.jpg);
+  background-repeat: no-repeat;
+  /* background-position: relative; */
+  background-size: cover;
+  overflow: auto;
+  background-position-x: 0;
+  background-position-y: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+
+  /* opacity: 0.25; */
+}
+a {
+  color: darkred;
+  size: 13 rem;
+  margin: 13px 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.523);
+  padding: 30px 10px;
+  border-radius: 30px;
+  margin-top: 15px;
 }

@@ -7,22 +7,21 @@
     <link href="~/css/styles.css" rel="stylesheet" type="text/css">
 
   </head>
-  <h1>Places You've Been List Place Details: </h1>
+  <body>
+    <div class="container">
+      <h2>Places You've Been List Place Details: </h2>
+
+      <h4>Place: @Model.PlaceName</h4>
+      <li>Company: @Model.Company</li>
+      <li>Length of Stay: @Model.LengthOfStay</li>
+      <li>Date Of Visit: @Model.DateOfVisit</li>
+      <li>Brief Journal Entry: @Model.JournalEntry</li>
+      <li>Favorite Food: @Model.FavFood</li>
 
 
-    @* PlaceName = placeName;
-      Company = company;
-      LengthOfStay = lengthOfStay;
-      DateOfVisit = dateOfVisit;
-      JournalEntry = journalEntry;
-      FavFood = favFood; *@
-<h2>Place: @Model.PlaceName</h2>
-<li>Company: @Model.Company</li>
-<li>Length of Stay: @Model.LengthOfStay</li>
-<li>Date Of Visit: @Model.DateOfVisit</li>
-<li>Brief Journal Entry: @Model.JournalEntry</li>
-<li>Favorite Food: @Model.FavFood</li>
+      <a href='/places/new'>Add another place</a>
+      <a href='/places'>View all places</a>
+    </div>
 
-
-<a href='/places/new'>Add another place</a>
-<a href='/places'>View all places</a>
+  </body>
+</html>

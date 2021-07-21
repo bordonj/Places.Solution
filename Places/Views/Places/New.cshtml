@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="~/css/styles.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
-  <h2>Tell us about the place you went to!</h2>
-    <div class='container'>
+  <div class='container'>
+    <body>
+    <h2>Tell us about the place you went to!</h2>
       <div class="form-row">
         <div class="col-5">
           <form action="/places" method="post">
           <label for="placeName">Add a new place:</label>
-          <input id="placeName" name="placeName" type="text" class="form-control">
+          <input id="placeName" name="placeName" type="text" class="form-control" required>
         </div>
         <div class="col-5">
           <label for="company">Add who accompanied you:</label>
@@ -42,8 +42,8 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-info">Submit</button>
     </form>
-    </div>
-  </body>
+    </body>
+  </div>
 </html>
