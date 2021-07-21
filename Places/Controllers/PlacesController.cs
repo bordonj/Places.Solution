@@ -7,26 +7,26 @@ namespace Places.Controllers
   public class PlacesController : Controller
   {
 
-    // [HttpGet("/places")] 
-    // public ActionResult Index()
-    // {
-    //   List<Item> allplaces = Item.GetAll();
-    //   return View(allplaces);
-    // }
+    [HttpGet("/places")] 
+    public ActionResult Index()
+    {
+      List<Place> allplaces = Place.GetAll();
+      return View(allplaces);
+    }
 
-    // [HttpGet("/places/new")] 
-    // public ActionResult New() // changed to New() from CreateForm
-    // {
-    //   return View();
-    // }
+    [HttpGet("/places/new")] 
+    public ActionResult New() // changed to New() from CreateForm
+    {
+      return View();
+    }
 
-    // [HttpPost("/places")] 
-    // public ActionResult Create(string description)
-    // {
-    //   Item myItem = new Item(description);
-    //   return RedirectToAction("Index");
+    [HttpPost("/places")] 
+    public ActionResult Create(string placeName, string company, string lengthOfStay, string dateOfVisit, string journalEntry, string favFood)
+    {
+      Place myPlace = new Place(placeName, company, lengthOfStay, dateOfVisit, journalEntry, favFood);
+      return RedirectToAction("Index");
 
-    // }
+    }
     // [HttpPost("/places/delete")]
     // public ActionResult DeleteAll()
     // {
