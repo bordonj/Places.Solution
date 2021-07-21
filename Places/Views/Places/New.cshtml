@@ -1,22 +1,49 @@
 <!-- The form also includes a method="post" attribute. When a form is being used to create a new object, it must have a post method. This creates a special type of HTTP request called a POST request. -->
-<form action="/places" method="post">
-  <label for="placeName">Add a new place</label>
-  <input id="placeName" name="placeName" type="text">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Hello Friend!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <h2>Tell us about the place you went to!</h2>
+    <div class='container'>
+      <div class="form-row">
+        <div class="col-5">
+          <form action="/places" method="post">
+          <label for="placeName">Add a new place:</label>
+          <input id="placeName" name="placeName" type="text" class="form-control">
+        </div>
+        <div class="col-5">
+          <label for="company">Add who accompanied you:</label>
+          <input id="company" name="company" type="text" class="form-control">
+        </div>
+        <div class="col-2">
+         <label for="dateOfVisit">Add date of visit:</label>
+          <input id="dateOfVisit" name="dateOfVisit" type="date" class="form-control">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="lengthOfStay">Add length of stay:</label>
+          <input id="lengthOfStay" name="lengthOfStay" type="text" class="form-control">
+        </div>
+        <div class="col">
+          <label for="favFood">Add your favorite food you tried in this new place:</label>
+          <input id="favFood" name="favFood" type="text" class="form-control">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-lg">
+          <label for="journalEntry">Add a little journal entry about your stay:</label>
+          <textarea id="journalEntry" name="journalEntry" type="text" class="form-control"></textarea>
+        </div>
+      </div>
 
-  <label for="company">Add who accompanied you</label>
-  <input id="company" name="company" type="text">
-
-  <label for="dateOfVisit">Add date of visit</label>
-  <input id="dateOfVisit" name="dateOfVisit" type="text">
-
-  <label for="lengthOfStay">Add length of stay</label>
-  <input id="lengthOfStay" name="lengthOfStay" type="text">
-
-  <label for="journalEntry">Add a little journal entry about your stay:</label>
-  <input id="journalEntry" name="journalEntry" type="text">
-
-  <label for="favFood">Add your favorite food you tried in this new place!</label>
-  <input id="favFood" name="favFood" type="text">
-
-  <button type="submit">Submit</button>
-</form>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    </div>
+  </body>
+</html>

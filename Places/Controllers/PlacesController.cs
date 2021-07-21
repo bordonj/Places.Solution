@@ -33,12 +33,12 @@ namespace Places.Controllers
       Place.ClearAll();
       return View();
     }
-    // [HttpGet("/places/{id}")] // new syntax, curly braces in URL path in route decorate... route now utilizing dynamic routing
-    // public ActionResult Show(int id)
-    // {
-    //   Place foundPlace = Place.Find(id);
-    //   return View(foundPlace);
-    // }
+    [HttpGet("/places/{id}")] // new syntax, curly braces in URL path in route decorate... route now utilizing dynamic routing
+    public ActionResult Show(int id)
+    {
+      Place foundPlace = Place.Find(id);
+      return View(foundPlace);
+    }
 
   }
 }

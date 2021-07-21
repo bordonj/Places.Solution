@@ -1,0 +1,15 @@
+h2 {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.btn {
+  width: 80px;
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+body {
+  padding: 0 150px;
+}
