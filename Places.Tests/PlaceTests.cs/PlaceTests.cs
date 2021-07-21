@@ -40,12 +40,6 @@ namespace Places.Tests
     {
       //Arrange
       
-    // PlaceName
-    // DateOfVisit
-    // Company (relationship to person?, name?)
-    // LengthOfStay
-    // JournalEntry
-    // FavFoods
       string placeName = "Atlanta, Georgia";
       string lengthOfStay = "5";
       string dateOfVisit = "08/21/2021";
