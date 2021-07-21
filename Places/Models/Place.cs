@@ -24,6 +24,11 @@ namespace Places.Models
     public Place (string placeName, string company, string lengthOfStay, string dateOfVisit, string journalEntry, string favFood)
     {
       PlaceName = placeName;
+      Company = company;
+      LengthOfStay = lengthOfStay;
+      DateOfVisit = dateOfVisit;
+      JournalEntry = journalEntry;
+      FavFood = favFood;
       _instances.Add(this);
       Id = _instances.Count;
     }
